@@ -515,6 +515,11 @@
     .class-item.ended .class-title {
       color: var(--text-gray);
     }
+    .class-item.ended .ended-badge {
+      display: inline-block !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
     .ended-badge {
       background: linear-gradient(135deg, #6b7280, #9ca3af);
       color: white;
@@ -526,6 +531,11 @@
       display: inline-block;
       position: relative;
       overflow: hidden;
+      animation: endedPulse 2s infinite;
+    }
+    @keyframes endedPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
     }
     .ended-badge::before {
       content: '⌛';
@@ -553,6 +563,11 @@
       transition: var(--transition);
       position: relative;
       overflow: hidden;
+      animation: recordingPulse 2s infinite;
+    }
+    @keyframes recordingPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
     }
     .watch-recording::before {
       content: '';
@@ -1176,10 +1191,10 @@
     </div>
 
     <!-- يوم الأربعاء 17 ديسمبر -->
-    <div class="day-label"><i class="far fa-calendar-alt"></i> الأربعاء 17 ديسمبر</div>
+    <div class="day-label"><i class="far fa-calendar-alt"></i> الأربعاء 17 ديسمبر - انتهت جميع الحصص</div>
     <div class="classes-grid">
-      <!-- حصة الرياضيات الصف ثاني عشر - نشطة -->
-      <div class="class-item" data-id="class1">
+      <!-- حصة الرياضيات الصف ثاني عشر - انتهت -->
+      <div class="class-item ended" data-id="class1">
         <div class="class-image-wrapper" onclick="openLightbox(event, 'https://c.top4top.io/p_3638w4ue71.jpeg', 'الأستاذ خالد الكلباني')">
           <img src="https://c.top4top.io/p_3638w4ue71.jpeg" alt="الأستاذ خالد الكلباني">
           <div class="zoom-hint"><i class="fas fa-search-plus"></i> تكبير</div>
@@ -1187,7 +1202,10 @@
 
         <div class="class-content">
           <div class="class-header">
-            <div class="class-title">الرياضيات - الصف الثاني عشر</div>
+            <div class="class-title">
+              <span class="ended-badge">انتهت</span>
+              الرياضيات - الصف الثاني عشر
+            </div>
             <div class="class-price"><span class="active-class-badge">مجانية</span></div>
           </div>
           <div class="class-details">
@@ -1197,12 +1215,19 @@
           <div class="class-details">
             حصة الرياضيات للصف الثاني عشر تغطي أهم المواضيع والنظريات الرياضية مع حل أمثلة وتطبيقات عملية.
           </div>
-          <div class="class-teacher"><i class="fas fa-chalkboard-teacher"></i> الأستاذ خالد الكلباني – حصة عن بعد</div>
+          <div class="class-teacher"><i class="fas fa-chalkboard-teacher"></i> الأستاذ خالد الكلباني</div>
+          
+          <!-- رابط تسجيل الحصة -->
+          <a href="https://drive.google.com/file/d/1Dorg2cwmyK_OXtGPCzK59VkIsW188gJg/view?usp=sharing" 
+             target="_blank" 
+             class="watch-recording">
+            <i class="fas fa-play-circle"></i> شاهد تسجيل الحصة
+          </a>
         </div>
       </div>
 
-      <!-- حصة الرياضيات الصف العاشر - نشطة -->
-      <div class="class-item" data-id="class1">
+      <!-- حصة الرياضيات الصف العاشر - انتهت -->
+      <div class="class-item ended" data-id="class1">
         <div class="class-image-wrapper" onclick="openLightbox(event, 'https://h.top4top.io/p_36321dqtn1.jpeg', 'الأستاذ محمد المزروعي')">
           <img src="https://h.top4top.io/p_36321dqtn1.jpeg" alt="الأستاذ محمد المزروعي">
           <div class="zoom-hint"><i class="fas fa-search-plus"></i> تكبير</div>
@@ -1210,7 +1235,10 @@
 
         <div class="class-content">
           <div class="class-header">
-            <div class="class-title">الرياضيات - الصف العاشر</div>
+            <div class="class-title">
+              <span class="ended-badge">انتهت</span>
+              الرياضيات - الصف العاشر
+            </div>
             <div class="class-price"><span class="active-class-badge">مجانية</span></div>
           </div>
           <div class="class-details">
@@ -1220,12 +1248,19 @@
           <div class="class-details">
             حصة الرياضيات للصف العاشر تغطي أهم المواضيع والنظريات الرياضية مع حل أمثلة وتطبيقات عملية.
           </div>
-          <div class="class-teacher"><i class="fas fa-chalkboard-teacher"></i> الأستاذ محمد المزروعي – حصة عن بعد</div>
+          <div class="class-teacher"><i class="fas fa-chalkboard-teacher"></i> الأستاذ محمد المزروعي</div>
+          
+          <!-- رابط تسجيل الحصة -->
+          <a href="https://drive.google.com/file/d/1AkG4nD53IVcScuLbGifzgG7Xni-N_BBe/view?usp=sharing" 
+             target="_blank" 
+             class="watch-recording">
+            <i class="fas fa-play-circle"></i> شاهد تسجيل الحصة
+          </a>
         </div>
       </div>
 
-      <!-- حصة الأحياء الصف العاشر - نشطة -->
-      <div class="class-item" data-id="class2">
+      <!-- حصة الأحياء الصف العاشر - انتهت -->
+      <div class="class-item ended" data-id="class2">
         <div class="class-image-wrapper" onclick="openLightbox(event, 'https://h.top4top.io/p_3633slai71.jpeg', 'الأستاذ خالد الكلباني')">
           <img src="https://h.top4top.io/p_3633slai71.jpeg" alt="الأستاذ خالد الكلباني">
           <div class="zoom-hint"><i class="fas fa-search-plus"></i> تكبير</div>
@@ -1233,7 +1268,10 @@
 
         <div class="class-content">
           <div class="class-header">
-            <div class="class-title">الأحياء - الصف العاشر</div>
+            <div class="class-title">
+              <span class="ended-badge">انتهت</span>
+              الأحياء - الصف العاشر
+            </div>
             <div class="class-price"><span class="active-class-badge">مجانية</span></div>
           </div>
           <div class="class-details">
@@ -1243,7 +1281,14 @@
           <div class="class-details">
             حصة الأحياء للصف العاشر تركز على فهم التركيب الخلوي والعمليات الحيوية في الكائنات الحية.
           </div>
-          <div class="class-teacher"><i class="fas fa-chalkboard-teacher"></i> الأستاذ خالد الكلباني – حصة عن بعد</div>
+          <div class="class-teacher"><i class="fas fa-chalkboard-teacher"></i> الأستاذ خالد الكلباني</div>
+          
+          <!-- رابط تسجيل الحصة -->
+          <a href="https://drive.google.com/file/d/1cs_auvG0LCUJ-PJ2-j-LppBsw_pyztsw/view?usp=sharing" 
+             target="_blank" 
+             class="watch-recording">
+            <i class="fas fa-play-circle"></i> شاهد تسجيل الحصة
+          </a>
         </div>
       </div>
     </div>
@@ -1363,7 +1408,7 @@
         <i class="fas fa-info-circle"></i> رابط الحصة ينشر قبل 10 دقائق فقط من بدئها عبر القنوات الرسمية
       </p>
       <p style="font-size: 0.8rem; color: var(--primary); margin-top: 5px; font-weight: 900;">
-        <i class="fas fa-magic"></i> 
+        <i class="fas fa-magic"></i> مصمم بكل حب لخدمة التعليم النوعي
       </p>
     </div>
   </div>
@@ -1426,6 +1471,13 @@
     document.addEventListener('DOMContentLoaded', function() {
       console.log('موقع أكاديمية ملهم جاهز! 🚀');
       
+      // تأكيد ظهور علامات "انتهت"
+      document.querySelectorAll('.class-item.ended .ended-badge').forEach(badge => {
+        badge.style.display = 'inline-block';
+        badge.style.visibility = 'visible';
+        badge.style.opacity = '1';
+      });
+      
       // إضافة تأثيرات للعناصر عند التمرير
       const observerOptions = {
         threshold: 0.1,
@@ -1457,4 +1509,3 @@
   </script>
 </body>
 </html>
-
